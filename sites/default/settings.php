@@ -184,9 +184,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'drupal_8',
-      'username' => 'drupal_c',
-      'password' => 'Zvp1Ib!U58',
+      'database' => 'recettes',
+      'username' => 'yvan',
+      'password' => '51biba95',
       'host' => 'localhost',
       'port' => '3306',
       'driver' => 'mysql',
@@ -458,10 +458,3 @@ ini_set('session.cookie_lifetime', 2000000);
  *
  * Remove the leading hash signs to disable.
  */
-# $conf['allow_authorize_operations'] = FALSE;
-
-$conf['maintenance_mode'] = FALSE;
-$conf['drupal_http_request_fails'] = FALSE;
- $GLOBALS['conf']['clean_url'] = 0;
- $conf['file_temporary_path'] = 'tmp';
-error_reporting(0);
