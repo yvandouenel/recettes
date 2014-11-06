@@ -47,15 +47,14 @@ function featurearticlesrecipes_field_formatter_info() {
 	$formatters = array();
 	$contexts = scald_contexts();
 	foreach ($contexts as $name => $context) {
-   dpm($name);
+   
 		if (empty($context['hidden'])) {
 			$formatters[$name] = array(
 					'label' => $context['title'],
 					'field types' => array('atom_reference'),
 			);
 			if (in_array($name,array('list','full','small'))) {
-        dpm($name);
-        dpm("Here");
+        
 				$formatters[$name]['settings'] = array('link' => 0);
 			}
 		}
