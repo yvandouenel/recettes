@@ -122,8 +122,10 @@ function featurearticlesrecipes_field_default_field_instances() {
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'featurearticlesrecipes',
-        'settings' => array(),
-        'type' => 'small',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'list',
         'weight' => 1,
       ),
     ),
