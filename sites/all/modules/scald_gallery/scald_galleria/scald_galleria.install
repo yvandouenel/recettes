@@ -17,4 +17,3 @@ function scald_galleria_install() {
   $context_config->player['gallery']['*'] = 'galleria';
   scald_context_config_save($context_config);
 }
-

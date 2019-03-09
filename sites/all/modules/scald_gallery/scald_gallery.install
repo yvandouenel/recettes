@@ -4,13 +4,11 @@
  * Scald Gallery Installation.
  */
 
-
-
 /**
  * Implements hook_install().
  */
 function scald_gallery_install() {
-  scald_add_type('gallery', 'Gallery', 'Gallery');
+  ScaldAtomController::addType('gallery', 'Gallery', 'Gallery');
 
   // Associate the gallery atom type to the "library" image style
   // in the library context.
@@ -18,12 +16,17 @@ function scald_gallery_install() {
   $context_config->transcoder['gallery']['*'] = 'style-Library';
   scald_context_config_save($context_config);
 
-  // Create fields and instances.
-  foreach (scald_gallery_installed_fields() as $field) {
-    field_create_field($field);
+  // Create fields and instances. Ignore the exceptions when field exists
+  // (because it is in a feature etc.).
+  try {
+    foreach (scald_gallery_installed_fields() as $field) {
+      field_create_field($field);
+    }
+    foreach (scald_gallery_installed_instances() as $instance) {
+      field_create_instance($instance);
+    }
   }
-  foreach (scald_gallery_installed_instances() as $instance) {
-    field_create_instance($instance);
+  catch (Exception $e) {
   }
 }
 
@@ -31,7 +34,7 @@ function scald_gallery_install() {
  * Implements hook_uninstall().
  */
 function scald_gallery_uninstall() {
-  scald_remove_type('gallery');
+  ScaldAtomController::removeType('gallery');
 }
 
 /**
@@ -73,4 +76,3 @@ function scald_gallery_installed_instances() {
 
   return $instances;
 }
-

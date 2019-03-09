@@ -4,11 +4,10 @@ core=7.x
 
 dependencies[] = scald
 dependencies[] = scald_image
-dependencis[]  = scald_dnd_library
+dependencies[] = scald_dnd_library
 
-; Information added by Drupal.org packaging script on 2014-06-12
-version = "7.x-1.2"
+; Information added by Drupal.org packaging script on 2018-07-30
+version = "7.x-1.11"
 core = "7.x"
 project = "scald"
-datestamp = "1402587231"
-
+datestamp = "1532952793"

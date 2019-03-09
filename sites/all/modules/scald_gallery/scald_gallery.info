@@ -5,10 +5,11 @@ core = 7.x
 dependencies[] = atom_reference
 dependencies[] = libraries
 
+files[] = tests/scald_gallery.test
 
-; Information added by drupal.org packaging script on 2013-08-23
-version = "7.x-2.1"
+; Information added by Drupal.org packaging script on 2017-08-04
+version = "7.x-2.7"
 core = "7.x"
 project = "scald_gallery"
-datestamp = "1377249157"
+datestamp = "1501858747"
 
