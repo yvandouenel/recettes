@@ -108,6 +108,7 @@
 </div>
   
   <div id="container">
+  
 
     <?php if ($is_front): ?>
       <?php print render($page['slideshow']); ?>
@@ -131,6 +132,11 @@
     <div class="content-sidebar-wrap">
 
     <div id="content">
+    <form action="" id="ingredient-search">
+      <label for="ingredient">Recherche par ingrédient :  </label>
+      <input type="text"  id="ingredient" placeholder="Entrez 3 lettres minimum">
+    </form>
+    <div id="ingredient-result"></div>
       <?php if (theme_get_setting('breadcrumbs', 'creative_responsive_theme')): ?><div id="breadcrumbs"><?php if ($breadcrumb): print $breadcrumb; endif;?></div><?php endif; ?>
       <section id="post-content" role="main">
         <?php print $messages; ?>
